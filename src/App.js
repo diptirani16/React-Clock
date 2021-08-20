@@ -12,6 +12,7 @@ class App extends React.Component  {
     this.handleSessionDecrement = this.handleSessionDecrement.bind(this);
     this.handleBreakIncrement = this.handleBreakIncrement.bind(this);
     this.handleSessionIncrement = this.handleSessionIncrement.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   handleBreakDecrement () {
@@ -39,6 +40,13 @@ class App extends React.Component  {
   handleSessionIncrement () {
     this.setState({
       sessionLength: this.state.sessionLength + 1
+    })
+  }
+
+  handleReset () {
+    this.setState ({
+      breakLength: 5,
+      sessionLength: 25
     })
   }
 
@@ -77,7 +85,7 @@ class App extends React.Component  {
 
      <div id="timer-control">
        <button id="start_stop"  className="icon"><i className="fa fa-play"></i><i className="fa fa-pause"></i></button>
-       <button id="reset"  className="icon" style={{fontSize: '1em'}}><i className="fa fa-retweet"></i></button>
+       <button id="reset" onClick={this.handleReset} className="icon" style={{fontSize: '1em'}}><i className="fa fa-retweet"></i></button>
      </div>
 
      <div className="author">
