@@ -3,7 +3,7 @@
   text-align: center;
   background-color: RGB(30, 85, 92);
   width: 100vw;
-  font-size: 30px;
+  font-size: 25px;
   height: 100vh;
   position: absolute;
   color: white;
@@ -60,6 +60,7 @@ position: relative;
 #time-left {
   font-family: digital;
   font-size: 70px;
+  /* margin-top: -65px; */
 }
 
 
